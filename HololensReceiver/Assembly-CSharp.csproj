@@ -70,6 +70,7 @@
     <Compile Include="Assets\PointCloudRenderer.cs" />
     <Compile Include="Assets\Singleton.cs" />
     <None Include="Assets\GS Billboard.shader" />
+    <None Include="Assets\PointCloud.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/eric/UnityProjects/LiveScan3D-Hololens/HololensReceiver/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
