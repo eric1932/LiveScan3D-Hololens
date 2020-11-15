@@ -9,28 +9,29 @@ public class StringEvent : UnityEvent<string> { }
 public class KeyboardInput : MonoBehaviour {
     public StringEvent keyboardDone;
     public string titleText;
-    TouchScreenKeyboard keyboard;
+    //TouchScreenKeyboard keyboard;
 
     void Start ()
     {
-#if WINDOWS_UWP
-        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false, titleText);
-#else
-        //Just for testing in the editor
-        if (keyboardDone != null)
-            keyboardDone.Invoke("127.0.0.1");
-#endif
+//#if WINDOWS_UWP
+//        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false, titleText);
+//#else
+//        //Just for testing in the editor
+//        if (keyboardDone != null)
+//            keyboardDone.Invoke("127.0.0.1");
+//#endif
+        keyboardDone.Invoke("192.168.2.231");
     }
 	
 	void Update ()
     {
-        if (TouchScreenKeyboard.visible == false && keyboard != null)
-        {
-            if (keyboard.done == true)
-            {
-                keyboardDone.Invoke(keyboard.text);
-                keyboard = null;
-            }
-        }
+        //if (TouchScreenKeyboard.visible == false && keyboard != null)
+        //{
+        //    if (keyboard.done == true)
+        //    {
+        //        keyboardDone.Invoke(keyboard.text);
+        //        keyboard = null;
+        //    }
+        //}
     }
 }
