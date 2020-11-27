@@ -13,24 +13,23 @@ public class KeyboardInput : MonoBehaviour {
 
     void Start ()
     {
-#if WINDOWS_UWP
-        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false, titleText);
-#else
-        //Just for testing in the editor
+        // Just for testing in the editor
         if (keyboardDone != null)
-            keyboardDone.Invoke("127.0.0.1");
-#endif
+            // keyboardDone.Invoke("127.0.0.1");
+            // keyboardDone.Invoke("192.168.2.231");
+            // keyboardDone.Invoke("192.168.196.13");
+            keyboardDone.Invoke("10.147.17.14");
     }
 	
 	void Update ()
     {
-        if (TouchScreenKeyboard.visible == false && keyboard != null)
-        {
-            if (keyboard.done == true)
-            {
-                keyboardDone.Invoke(keyboard.text);
-                keyboard = null;
-            }
-        }
+        //if (TouchScreenKeyboard.visible == false && keyboard != null)
+        //{
+        //    if (keyboard.done == true)
+        //    {
+        //        keyboardDone.Invoke(keyboard.text);
+        //        keyboard = null;
+        //    }
+        //}
     }
 }
