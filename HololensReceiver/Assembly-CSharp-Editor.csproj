@@ -336,6 +336,24 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Plugins/LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="NRToolkit.Sharing.Client">
+      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/NRToolkit.Sharing.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NRToolkit.Sharing.ClientEngine">
+      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/NRToolkit.Sharing.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="NRToolkit.Sharing.ProtoBase">
+      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/NRToolkit.Sharing.ProtoBase.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -350,24 +368,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="NRToolkit.Sharing.Client">
-      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/NRToolkit.Sharing.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NRToolkit.Sharing.ClientEngine">
-      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/NRToolkit.Sharing.ClientEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="LitJSON">
-      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Plugins/LitJSON.dll</HintPath>
-    </Reference>
-    <Reference Include="NRToolkit.Sharing.ProtoBase">
-      <HintPath>/Users/eric/UnityProjects/LiveScan3D-ImageTracking x nReal/HololensReceiver/Assets/NRSDK/Scripts/Sharing/Plugins/x64/NRToolkit.Sharing.ProtoBase.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2018.4.28f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
