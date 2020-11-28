@@ -20,7 +20,8 @@ public class KeyboardInput : MonoBehaviour {
 //        if (keyboardDone != null)
 //            keyboardDone.Invoke("127.0.0.1");
 //#endif
-        keyboardDone.Invoke("192.168.2.231");
+        // keyboardDone.Invoke("192.168.2.231");
+        keyboardDone.Invoke("192.168.1.81");
     }
 	
 	void Update ()

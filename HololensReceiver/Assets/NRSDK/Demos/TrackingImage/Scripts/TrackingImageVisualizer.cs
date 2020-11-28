@@ -69,9 +69,7 @@
             {
                 var imageCenter = Image.GetCenterPose();
                 transform.position = imageCenter.position;
-                transform.position = new Vector3(transform.rotation.x,
-                                                 transform.rotation.y,
-                                                 transform.rotation.z);
+                transform.rotation = imageCenter.rotation;
                 Cube.SetActive(true);
                 return;
             }
