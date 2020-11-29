@@ -258,6 +258,7 @@
     <Compile Include="Assets\PointCloudReceiver.cs" />
     <Compile Include="Assets\PointCloudRenderer.cs" />
     <Compile Include="Assets\Singleton.cs" />
+    <Compile Include="Assets\ZoomController.cs" />
     <None Include="Assets\NRSDK\Demos\RGBCamera\Materials\UVCTexture.shader" />
     <None Include="Assets\NRSDK\Resources\Profiller\InstancedColored.shader" />
     <None Include="Assets\NRSDK\Shaders\Unlit-AlphaWithFade.shader" />
