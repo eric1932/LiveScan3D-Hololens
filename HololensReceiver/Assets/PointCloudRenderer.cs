@@ -68,7 +68,8 @@ public class PointCloudRenderer : MonoBehaviour
             GameObject newElem = GameObject.Instantiate(pointCloudElem);
             newElem.transform.parent = transform;
             newElem.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-            newElem.transform.localRotation = Quaternion.identity;
+            //newElem.transform.localRotation = Quaternion.identity;
+            newElem.transform.localRotation = Quaternion.Euler(0, 180, 180);
             newElem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
             elems.Add(newElem);
