@@ -39,7 +39,7 @@ public class PointCloudReceiver : MonoBehaviour
 
         if (bReadyForNextFrame)
         {
-            Debug.Log("Requesting frame");
+            //Debug.Log("Requesting frame");
 
 #if WINDOWS_UWP
             socket.RequestFrame();
@@ -56,7 +56,7 @@ public class PointCloudReceiver : MonoBehaviour
         if (ReceiveFrame(out vertices, out colors))
     #endif
         {
-            Debug.Log("Frame received");
+            //Debug.Log("Frame received");
             pointCloudRenderer.Render(vertices, colors);
             bReadyForNextFrame = true;
         }
@@ -70,7 +70,7 @@ public class PointCloudReceiver : MonoBehaviour
         socket = new TcpClient(IP, port);
 #endif
         bConnected = true;
-        Debug.Log("Coonnected");
+        //Debug.Log("Connected");
     }
 
     //Frame receiving for the editor
