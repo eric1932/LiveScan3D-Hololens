@@ -20,9 +20,8 @@ public class KeyboardInput : MonoBehaviour {
         //        if (keyboardDone != null)
         //            keyboardDone.Invoke("127.0.0.1");
         //#endif
-        // keyboardDone.Invoke("192.168.2.231");
         #if UNITY_EDITOR
-            keyboardDone.Invoke("10.211.55.3");
+            keyboardDone.Invoke("192.168.2.232");
         #else
             keyboardDone.Invoke("192.168.1.81");
         #endif
