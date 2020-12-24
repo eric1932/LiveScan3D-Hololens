@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class PointCloudRenderer : MonoBehaviour
@@ -69,7 +69,7 @@ public class PointCloudRenderer : MonoBehaviour
             newElem.transform.parent = transform;
             newElem.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
             //newElem.transform.localRotation = Quaternion.identity;
-            newElem.transform.localRotation = Quaternion.Euler(0, 180, 180);
+            newElem.transform.localRotation = Quaternion.Euler(0, 180, 180);  // Fix rotation
             newElem.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
             elems.Add(newElem);
