@@ -100,7 +100,10 @@ public class PointCloudReceiver : MonoBehaviour
 
     bool ReceiveFrame(out float[] lVertices, out byte[] lColors)
     {
-        int nPointsToRead = ReadInt();
+        // int nPointsToRead = ReadInt();
+        byte[] buffer0 = new byte[4];
+        socket.GetStream().Read(buffer0, 0, 4);
+        int nPointsToRead = BitConverter.ToInt32(buffer0, 0);
 
         lVertices = new float[3 * nPointsToRead];
         short[] lShortVertices = new short[3 * nPointsToRead];
