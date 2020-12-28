@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
@@ -9,6 +9,8 @@ using NetworkCommunication;
 using System.Net.Sockets;
 using System.Threading;
 #endif
+
+using NRKernal;
 
 
 public class PointCloudReceiver : MonoBehaviour
@@ -36,6 +38,8 @@ public class PointCloudReceiver : MonoBehaviour
 
         float[] vertices;
         byte[] colors;
+
+        if (NRInput.IsTouching()) return;  // If touching trackpad, do not render
 
         if (bReadyForNextFrame)
         {
