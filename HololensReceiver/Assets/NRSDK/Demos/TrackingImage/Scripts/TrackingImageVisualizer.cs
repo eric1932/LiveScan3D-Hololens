@@ -58,6 +58,14 @@
 
         public GameObject Cube;
 
+        // Debug
+#if UNITY_EDITOR
+        public void Start()
+        {
+            Cube.SetActive(true);
+            Debug.Log("Cube Set Active");
+        }
+#else  // Image is not accessible in UNITY_EDITOR, cannot exec code below
         public void Update()
         {
             if (Image == null)
@@ -74,5 +82,6 @@
                 return;
             }
         }
+#endif
     }
 }

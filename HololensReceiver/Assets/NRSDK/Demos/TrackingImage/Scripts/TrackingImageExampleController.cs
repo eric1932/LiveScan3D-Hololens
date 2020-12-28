@@ -20,8 +20,30 @@
 
         private List<NRTrackableImage> m_TempTrackingImages = new List<NRTrackableImage>();
 
+        private bool virtualImageTrackingEnabled = false;
+
         public void Update()
         {
+#if UNITY_EDITOR
+            if (virtualImageTrackingEnabled)
+            {
+                return;
+            }
+            else
+            {
+                TrackingImageVisualizer visualizer = null;
+                NRDebugger.Log("Create new TrackingImageVisualizer!");
+                // Create an anchor to ensure that NRSDK keeps tracking this augmented image.
+                visualizer = (TrackingImageVisualizer)Instantiate(TrackingImageVisualizerPrefab, new Vector3(0f, 0f, 10f), Quaternion.identity);
+                visualizer.transform.parent = transform;
+                visualizer.transform.localPosition = new Vector3(0, 0, 5f);
+
+                virtualImageTrackingEnabled = true;
+
+                return;
+            }
+#endif
+
 #if !UNITY_EDITOR
             // Check that motion tracking is tracking.
             if (NRFrame.SessionStatus != SessionState.Running)
