@@ -23,7 +23,11 @@ public class KeyboardInput : MonoBehaviour {
         #if UNITY_EDITOR
             keyboardDone.Invoke("192.168.2.232");
         #else
-            keyboardDone.Invoke("192.168.1.81");
+            // ASUS Router
+            // keyboardDone.Invoke("192.168.1.81");  // MacBook
+            // keyboardDone.Invoke("192.168.1.77");  // Lenovo
+            // Huawei Router
+            keyboardDone.Invoke("192.168.3.3");  // Lenovo
         #endif
     }
 	
