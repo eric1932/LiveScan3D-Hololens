@@ -1,4 +1,4 @@
-﻿namespace NRKernal.NRExamples
+namespace NRKernal.NRExamples
 {
     using UnityEngine;
 
@@ -76,7 +76,7 @@
             else
             {
                 var imageCenter = Image.GetCenterPose();
-                transform.position = imageCenter.position; // + new Vector3(0, 0, 0.2f);
+                transform.position = imageCenter.position + new Vector3(0, 0, -0.2f);
                 transform.rotation = imageCenter.rotation;
                 Cube.SetActive(true);
                 return;
