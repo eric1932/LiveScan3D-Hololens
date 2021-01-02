@@ -40,17 +40,27 @@ public class ZoomController : MonoBehaviour
         }
         else
         {
-            if (vec.y >= 0)
+            if (vec.y <= 0)  // swipe down in emu; swipe up on real device
             {
-                // swipe down => zoom out
-                //transform.localScale *= 0.975f;
-                transform.localScale -= new Vector3(0.075f, 0.075f, 0.075f);
+                // => zoom out
+                transform.localScale *= 0.95f;
+                // Linear method
+                if (transform.localScale.x <= 0.01)  // prevent rounding to 0
+                {
+                    transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+                }
+
+                // alternative: Addition
+                //transform.localScale -= new Vector3(0.05f, 0.05f, 0.05f);
             }
-            else
+            else  // swipe up in emu; swipe up on real device
             {
-                // swipe up => zoom in
-                //transform.localScale *= 1.025f;
-                transform.localScale += new Vector3(0.075f, 0.075f, 0.075f);
+                // => zoom in
+                // Linear method
+                transform.localScale *= 1.05f;
+
+                // alternative: Addition
+                //transform.localScale += new Vector3(0.075f, 0.075f, 0.075f);
             }
         }
     }
