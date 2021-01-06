@@ -1,4 +1,4 @@
-namespace NRKernal.NRExamples
+﻿namespace NRKernal.NRExamples
 {
     using UnityEngine;
 
@@ -65,18 +65,19 @@ namespace NRKernal.NRExamples
             Cube.SetActive(true);
             Debug.Log("Cube Set Active");
         }
-#else  // Image is not accessible in UNITY_EDITOR, cannot exec code below
+#else  // Image is not accessible in UNITY_EDITOR, should NOT exec code below
         public void Update()
         {
-            if (Image == null)
+            // Want the imperfect image tracking here
+            if (Image == null /*|| Image.GetTrackingState() != TrackingState.Tracking*/)
             {
-                Cube.SetActive(false);
+                // Cube.SetActive(false);
                 return;
             }
             else
             {
                 var imageCenter = Image.GetCenterPose();
-                transform.position = imageCenter.position + new Vector3(0, 0, -0.2f);
+                transform.position = imageCenter.position + new Vector3(0, 0, 2f);
                 transform.rotation = imageCenter.rotation;
                 Cube.SetActive(true);
                 return;
