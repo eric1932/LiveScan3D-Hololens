@@ -33,12 +33,17 @@
             {
                 TrackingImageVisualizer visualizer = null;
                 NRDebugger.Log("Create new TrackingImageVisualizer!");
-                // Create an anchor to ensure that NRSDK keeps tracking this augmented image.
-                visualizer = (TrackingImageVisualizer)Instantiate(TrackingImageVisualizerPrefab, new Vector3(0f, 0f, 10f), Quaternion.identity);
-                visualizer.transform.parent = transform;
+                visualizer = (TrackingImageVisualizer) Instantiate(
+                    TrackingImageVisualizerPrefab,
+                    new Vector3(0f, 0f, 0f),
+                    Quaternion.identity);
+                // visualizer.transform.parent = transform;
+                visualizer.transform.parent = null;  // add to root of scene
                 visualizer.transform.localPosition = new Vector3(0, 0, 5f);
 
-                virtualImageTrackingEnabled = true;
+                virtualImageTrackingEnabled = true;  // set flag
+
+                Destroy(gameObject);  // STOP image tracking
 
                 return;
             }
@@ -66,8 +71,10 @@
                     // Create an anchor to ensure that NRSDK keeps tracking this augmented image.
                     visualizer = (TrackingImageVisualizer)Instantiate(TrackingImageVisualizerPrefab, image.GetCenterPose().position, image.GetCenterPose().rotation);
                     visualizer.Image = image;
-                    visualizer.transform.parent = transform;
+                    // visualizer.transform.parent = transform;
+                    visualizer.transform.parent = null;  // add to root of scene
                     m_Visualizers.Add(image.GetDataBaseIndex(), visualizer);
+                    Destroy(gameObject);  // STOP image tracking
                 }
                 else if (image.GetTrackingState() == TrackingState.Stopped && visualizer != null)
                 {

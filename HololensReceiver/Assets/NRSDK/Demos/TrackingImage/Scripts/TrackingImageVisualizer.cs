@@ -1,6 +1,7 @@
 ﻿namespace NRKernal.NRExamples
 {
     using UnityEngine;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Uses 4 frame corner objects to visualize an TrackingImage.
@@ -62,7 +63,10 @@
 #if UNITY_EDITOR
         public void Start()
         {
-            Cube.SetActive(true);
+            // Add to root of scene instead of setting as child
+            Instantiate(Cube, new Vector3(0f, 0f, 0f), Quaternion.identity);
+            Destroy(gameObject);
+            //Cube.SetActive(true);
             Debug.Log("Cube Set Active");
         }
 #else  // Image is not accessible in UNITY_EDITOR, should NOT exec code below
@@ -77,9 +81,12 @@
             else
             {
                 var imageCenter = Image.GetCenterPose();
-                transform.position = imageCenter.position + new Vector3(0, 0, 2f);
-                transform.rotation = imageCenter.rotation;
-                Cube.SetActive(true);
+                // same as Start()
+                Instantiate(Cube, imageCenter.position, imageCenter.rotation);
+                Destroy(gameObject);
+                //transform.position = imageCenter.position + new Vector3(0, 0, 2f);
+                //transform.rotation = imageCenter.rotation;
+                //Cube.SetActive(true);
                 return;
             }
         }
