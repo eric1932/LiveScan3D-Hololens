@@ -1,4 +1,4 @@
-﻿namespace NRKernal.NRExamples
+﻿amespace NRKernal.NRExamples
 {
     using UnityEngine;
     using System.Collections.Generic;

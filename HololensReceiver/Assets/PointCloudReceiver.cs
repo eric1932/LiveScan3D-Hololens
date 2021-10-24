@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
@@ -26,6 +26,8 @@ public class PointCloudReceiver : MonoBehaviour
     bool bReadyForNextFrame = true;
     bool bConnected = false;
 
+    // private System.DateTime time = System.DateTime.Now;
+
     void Start()
     {
         pointCloudRenderer = GetComponent<PointCloudRenderer>();
@@ -44,6 +46,10 @@ public class PointCloudReceiver : MonoBehaviour
         if (bReadyForNextFrame)
         {
             //Debug.Log("Requesting frame");
+            // TimeSpan ts = System.DateTime.Now.Subtract(time);
+            // if (ts.Seconds < 0.2) {
+            //     return;
+            // }
 
 #if WINDOWS_UWP
             socket.RequestFrame();
